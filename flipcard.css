@@ -54,7 +54,7 @@
 
 /* button styles */
 
-.flip-card-back #btn {
+/* .flip-card-back #btn {
   border: none;
   outline: none;
   padding: 10px;
@@ -79,4 +79,73 @@
 
 #instructions {
   text-align: left;
+} */
+
+#instructions {
+  text-align: left;
+}
+
+.flip-card-back #btn:active {
+  transform: scale(0.98);
+  transition: transform 0.5s;
+}
+
+.slideUpBtn {
+  padding: 12px 24px;
+  background-color: transparent;
+  border: 2px solid rgb(235, 234, 240);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(1, 0.15, 0.34, 0.92);
+}
+
+.slideUpBtn span {
+  display: inline-block;
+  transition: inherit;
+  color: rgb(235, 234, 240);
+}
+
+.slideUpBtn:hover span {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.slideUpBtn::before {
+  content: "";
+  background-color: rgb(235, 234, 240);
+  color: hsl(222, 74%, 62%);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translateY(100%);
+  transition: inherit;
+  width: 100%;
+  transition: transform 0.5s cubic-bezier(1, 0.15, 0.34, 0.92);
+}
+
+.slideUpBtn::after {
+  content: "PLAY";
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: inherit;
+  transform: translateY(100%);
+  width: 100%;
+}
+
+.slideUpBtn:hover::before {
+  transform: translateY(0) scale(3);
+  transition-delay: 0.025s;
+}
+
+.slideUpBtn:hover::after {
+  opacity: 1;
+  color: hsl(222, 74%, 62%);
+  transform: translateY(0);
 }
