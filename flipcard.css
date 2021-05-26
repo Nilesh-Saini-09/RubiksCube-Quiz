@@ -52,9 +52,7 @@
   justify-content: center;
 }
 
-/* button styles */
-
-/* .flip-card-back #btn {
+.flip-card-back #btn {
   border: none;
   outline: none;
   padding: 10px;
@@ -79,18 +77,13 @@
 
 #instructions {
   text-align: left;
-} */
-
-#instructions {
-  text-align: left;
 }
 
-.flip-card-back #btn:active {
-  transform: scale(0.98);
-  transition: transform 0.5s;
+a {
+  text-decoration: none;
 }
 
-.slideUpBtn {
+/* .slideUpBtn {
   padding: 12px 24px;
   background-color: transparent;
   border: 2px solid rgb(235, 234, 240);
@@ -148,4 +141,4 @@
   opacity: 1;
   color: hsl(222, 74%, 62%);
   transform: translateY(0);
-}
+} */
