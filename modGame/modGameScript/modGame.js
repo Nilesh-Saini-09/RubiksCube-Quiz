@@ -12,54 +12,144 @@ let availableQuestions = [];
 
 let questions = [
     {
-        question: "How Many Possible Mixups Are There For A Rubiks Cube?",
-        choice1: '43 Quintillion',
-        choice2: '24000',
-        choice3: '34 Billion',
-        choice4: '52 Quintillion',
-        answer: 1
-    },
-
-    {
-        question: 'Which of the following organizations governs competitions for all puzzles labeled as Rubik puzzles?',
-        choice1: 'WCA',
-        choice2: 'ICA',
-        choice3: 'RCA',
-        choice4: 'CubeOrg',
-        answer: 1
-    },
-
-    {
-        question: "What happens 'Just as my SD card runs out'?",
-        choice1: 'The GoPro falls off the desk',
-        choice2: 'The Square-1 explodes during an official solve',
-        choice3: 'Feliks Zemdegs breaks the World Record',
-        choice4: 'WALL-E hands over a cube to EVE',
-        answer: 3
-    },
-
-    {
-        question: 'Who is Oskar van Deventer?',
-        choice1: 'Custom twisty puzzle designer and inventor',
-        choice2: 'Speedcuber who broke the 2x2 and 3x3 records in 2008',
-        choice3: "Magician who performs Rubik's Cube tricks",
-        choice4: 'Founder of the World Cube Association',
-        answer: 1
-    },
-
-    {
-        question: "Who was the first speedcuber to solve the Rubik's Cube under 5 seconds on an official competition?",
-        choice1: 'Feliks Zemdegs',
-        choice2: 'Collin Burns',
-        choice3: 'Oskar van Deventer',
-        choice4: 'Lucas Etter',
-        answer: 4
-    }
+        question: "Where did the first Rubik's Cube competition was organized?",
+        choice1:  "Brazil",
+        choice2:  "Budapest",
+        choice3:  "Paris",
+        choice4:  "Boston",
+        answer: 2,
+      },
+    
+      {
+        question: "What did the Rubik's Cube manufacturer consider naming the cube for its international launch in 1980?",
+        choice1:  "It was always going to be called Rubik's Cube",
+        choice2:  "The Gordian Knot",
+        choice3:  "The Wonder Cube",
+        choice4:  "Puzzling Puzzle",
+        answer: 2,
+      },
+    
+      {
+        question: "Who set the first official world record time for solving the 3x3x3 Rubik's Cube? How fast was that record?",
+        choice1:  "Feliks Zemdegs 7.95 seconds",
+        choice2:  "Lucas Etter 4.93 seconds",
+        choice3:  "Minh Thai 22.95 Seconds",
+        choice4:  "Erno Rubik 24.22 seconds",
+        answer: 3,
+      },
+    
+      {
+        question: "How many PLL Cases are there in CFOP method of solving Rubik's Cube",
+        choice1:  "51",
+        choice2:  "27",
+        choice3:  "21",
+        choice4:  "12",
+        answer: 3,
+      },
+    
+      {
+        question: "Who is the first cuber to get a sub 4 in an official competition?",
+        choice1:  "Max Park",
+        choice2:  "Feliks Zemdegs",
+        choice3:  "Yusheng du",
+        choice4:  "Aryan Chabbra",
+        answer: 3,
+      },
+    
+      {
+        question: "In what year skewb was declared an official wca event?",
+        choice1:  "2012",
+        choice2:  "2006",
+        choice3:  "2014",
+        choice4:  "2018",
+        answer: 3,
+      },
+    
+      {
+        question: "Which cuber dropped the cube while solving and still got a sub 5 solve in an offical WCA competition?",
+        choice1:  "Sebastian Weyer",
+        choice2:  "Chris Olson",
+        choice3:  "Patrick Ponce",
+        choice4:  "Jayden McNeill",
+        answer: 4,
+      },
+    
+      {
+        question: "Choose the most used speedcubing method?",
+        choice1:  "CFOP",
+        choice2:  "Roux",
+        choice3:  "Petrus",
+        choice4:  "ZZ",
+        answer: 1,
+      },
+    
+      {
+        question: "Who holds the asian record for 3x3 OH (single) event?",
+        choice1:  "Bhargav Narasimhan",
+        choice2:  "Asia Konvittayayotin",
+        choice3:  "Ruihang Xu",
+        choice4:  "Max Park",
+        answer: 2,
+      },
+    
+      {
+        question: "which cuber won the WCA World Championship twice?",
+        choice1:  "Max Park",
+        choice2:  "Yusheng Du",
+        choice3:  "Kevin Hays",
+        choice4:  "Feliks Zemdegs",
+        answer: 4,
+      },
+    
+      {
+        question: "Where was the World Rubik's Cube Championship was held in 2019",
+        choice1:  "Paris, France",
+        choice2:  "Beijing, China",
+        choice3:  "Melbourne, Australia",
+        choice4:  "São Paulo, Brazil",
+        answer: 3,
+      },
+    
+      {
+        question: "Who is the world record holder for rubiks cube with feet event?",
+        choice1:  "Mohammed Aiman Koli",
+        choice2:  "Henri Gerber",
+        choice3:  "Daniel Rose-Levine",
+        choice4:  "Tommy Cherry",
+        answer: 1,
+      },
+    
+      {
+        question: "Who invented CFOP method of solving 3x3x3 Rubik's Cube?",
+        choice1:  "Jessica Fredrich",
+        choice2:  "Ron Van Bruchem",
+        choice3:  "Minh Thai",
+        choice4:  "Erik Akkersdijk",
+        answer: 1,
+      },
+    
+      {
+        question: "The book 'The Winning Solution' teaches which method?",
+        choice1:  "CFOP",
+        choice2:  "Roux",
+        choice3:  "Ortega",
+        choice4:  "Ortega Corners-First",
+        answer: 4,
+      },
+    
+      {
+        question: "In which year WCA was formed?",
+        choice1:  "2000",
+        choice2:  "2002",
+        choice3:  "2003",
+        choice4:  "2007",
+        answer: 3,
+      },
 ];
 
 
 const SCORE_POINTS = 100;
-const MAX_QUESTIONS = 5;
+const MAX_QUESTIONS = 15;
 
 startGame = () => {
     questionCounter = 0;
