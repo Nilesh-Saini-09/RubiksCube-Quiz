@@ -1,3 +1,11 @@
+:root {
+  --darkgray: #212329;
+  --brightred: #f9423d;
+  --white: #fff;
+  --lightred: #f9433dcc;
+  --neon: #ccff00;
+}
+
 .flip-card {
   background-color: transparent;
   width: 100%;
@@ -12,7 +20,7 @@
   /*   text-align: center; */
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  border: 2px solid #ffffff;
+  border: 2px solid var(--white);
   /*   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
 }
 
@@ -31,8 +39,8 @@
 }
 
 .flip-card-front {
-  background-color: #000000;
-  color: #ccff00;
+  background-color: var(--black);
+  color: var(--neon);
   font-family: "Good Sans", Arial, Helvetica, sans-serif;
   font-weight: 900;
   display: flex;
@@ -45,18 +53,18 @@
 }
 
 .flip-card-back {
-  background-color: #ccff00;
-  color: white;
+  background-color: var(--neon);
+  color: var(--white);
   transform: rotateY(180deg);
-  border: 2px solid #000000;
+  border: 2px solid var(--black);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .flip-card-back .btn {
-  background-color: #000000;
-  color: #ccff00;
+  background-color: var(--black);
+  color: var(--neon);
   font-weight: 900;
   border: none;
   outline: none;
@@ -70,8 +78,8 @@
 }
 
 .flip-card-back .btn:hover {
-  background-color: #fff;
-  color: #000000;
+  background-color: var(--white);
+  color: var(--black);
   font-weight: 900;
   transform: scale(1.2);
 }
@@ -83,11 +91,12 @@
 
 #instructions {
   text-align: left;
+  margin-left: 8%;
 }
 
 #instructions > ul > li {
   margin-bottom: 15px;
-  color: #000000;
+  color: var(--black);
   font-weight: 700;
   font-family: "Good Sans", Helvetica !important;
   letter-spacing: -0.01em;
