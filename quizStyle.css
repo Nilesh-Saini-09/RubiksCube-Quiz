@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-  /*   background-color: red; */
+  /* background-color: red; */
   width: 700px;
   height: 500px;
   text-align: center;
@@ -22,10 +22,25 @@ body {
 
 .allcards {
   display: grid;
-  grid-template-columns: 300px 300px;
+  /* grid-template-columns: 300px 300px; */
+  grid-template-columns: repeat(2, 300px);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 0 0 10px;
+}
+
+/* media queries */
+
+@media (max-width: 750px) {
+  .allcards {
+    grid-template-columns: repeat(2, 250px);
+  }
+}
+
+@media (max-width: 610px) {
+  .allcards {
+    grid-template-columns: repeat(2, 220px);
+  }
 }
