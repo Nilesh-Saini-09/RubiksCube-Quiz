@@ -7,13 +7,6 @@
   --black: #000000;
 }
 
-/* Navbar */
-
-.nav-container {
-  width: 100%;
-  background-color: var(--darkgray);
-}
-
 /* General Styles */
 * {
   box-sizing: border-box;
@@ -23,6 +16,54 @@
 
 body {
   background-color: var(--neon);
+}
+
+/* .main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} */
+
+/* Navbar */
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+  padding: 15px 50px;
+}
+
+#navbar .nav-left {
+  color: #fff;
+  font-size: 15px;
+}
+
+/* .nav-left #brand {
+
+} */
+
+#navbar .nav-right {
+  color: #fff;
+  max-width: 180px;
+}
+
+#navbar .nav-right a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 3px;
+  transition: all 0.25s;
 }
 
 .container {
@@ -49,18 +90,202 @@ body {
   box-shadow: 0 0 10px;
 }
 
-/* Navbar */
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+  padding: 15px 50px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.footer .footer-left {
+  color: #fff;
+  font-size: 20px;
+}
+
+.footer .footer-right {
+  color: #fff;
+  max-width: 180px;
+}
+
+.footer .footer-right a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 3px;
+  transition: all 0.25s;
+}
 
 /* media queries */
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
   .allcards {
-    grid-template-columns: repeat(2, 250px);
+    grid-template-columns: repeat(2, 270px);
   }
 }
 
 @media (max-width: 610px) {
   .allcards {
     grid-template-columns: repeat(2, 220px);
+  }
+
+  .footer-left {
+    font-size: 8px;
+  }
+
+  #instructions {
+    text-align: left;
+    margin-left: 8%;
+    width: 90%;
+  }
+
+  #instructions > ul > li {
+    margin-bottom: 15px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 568px) {
+  .allcards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 70%;
+    height: 80%;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer-left {
+    margin-bottom: 3%;
+  }
+
+  #instructions {
+    text-align: left;
+    margin-left: 8%;
+    margin-top: 3%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 515px) {
+  .allcards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #instructions {
+    text-align: left;
+    margin-left: 8%;
+    width: 100%;
+  }
+
+  #instructions > ul > li {
+    margin-bottom: 8px;
+    font-size: 11px;
+    font-weight: 300;
+  }
+}
+
+@media (max-width: 450px) {
+  .allcards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #navbar {
+    flex-direction: column;
+  }
+
+  .nav-left {
+    margin-bottom: 3%;
+  }
+}
+
+@media (max-width: 371px) {
+  .footer-left span {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 330px) {
+  .allcards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 37%;
+    height: 57%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .footer .footer-right a {
+    width: 25px;
+    height: 25px;
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  #navbar .nav-right a {
+    width: 25px;
+    height: 25px;
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  #instructions {
+    text-align: left;
+    margin-left: 8%;
+    margin-bottom: 2%;
+    width: 100%;
+    height: 100%;
+  }
+
+  #instructions > ul > li {
+    margin-bottom: 0%;
+    font-size: 10px;
+    font-weight: 200;
   }
 }
