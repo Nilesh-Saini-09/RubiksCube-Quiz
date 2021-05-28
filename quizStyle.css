@@ -43,6 +43,12 @@ body {
   font-size: 15px;
 }
 
+#navbar .nav-left a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 /* .nav-left #brand {
 
 } */
