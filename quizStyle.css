@@ -1,10 +1,27 @@
+:root {
+  --darkgray: #212329;
+  --brightred: #f9423d;
+  --white: #fff;
+  --lightred: #f9433dcc;
+  --neon: #ccff00;
+}
+
+/* Navbar */
+
+.nav-container {
+  width: 100%;
+  background-color: var(--darkgray);
+}
+
 /* General Styles */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background-color: #ccff00;
+  background-color: var(--neon);
 }
 
 .container {
@@ -30,6 +47,8 @@ body {
   transform: translate(-50%, -50%);
   box-shadow: 0 0 10px;
 }
+
+/* Navbar */
 
 /* media queries */
 
